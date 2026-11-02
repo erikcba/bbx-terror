@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TaskResource" load_steps=2 format=3 uid="uid://cgwf6cd6h6wna"]
+
+[ext_resource type="Script" uid="uid://cpqk02pf8dmh" path="res://scripts/TaskResource.gd" id="1_2fif2"]
+
+[resource]
+script = ExtResource("1_2fif2")
+id = "encender_luces"
+description = "Encender luces "
+metadata/_custom_type_script = "uid://cpqk02pf8dmh"

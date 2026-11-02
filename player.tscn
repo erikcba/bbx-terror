@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5elsyk544hi"]
+[gd_scene load_steps=6 format=3 uid="uid://b5elsyk544hi"]
 
 [ext_resource type="Script" uid="uid://bwer18gefs8en" path="res://Personajes/player.gd" id="1_ivbph"]
 [ext_resource type="Script" uid="uid://dj6fw8hntgb41" path="res://Personajes/fp_cam.gd" id="2_1jrbx"]
+[ext_resource type="AudioStream" uid="uid://skxtoliebj8m" path="res://Sonidos/pasos_personaje2.mp3" id="3_i3pqv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6b25w"]
 
@@ -17,8 +18,22 @@ shape = SubResource("CapsuleShape3D_6b25w")
 mesh = SubResource("CapsuleMesh_ivbph")
 
 [node name="cabeza" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65921926, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7507622, 0)
 script = ExtResource("2_1jrbx")
 
 [node name="Camera3D" type="Camera3D" parent="cabeza"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.22993338)
+
+[node name="RayCast3D" type="RayCast3D" parent="cabeza/Camera3D"]
+target_position = Vector3(0, 0, -2)
+
+[node name="Linterna" type="SpotLight3D" parent="cabeza/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31971908, -0.46408165, -0.33518398)
+visible = false
+light_energy = 1.588
+shadow_enabled = true
+spot_range = 6.13
+spot_angle = 22.22
+
+[node name="FootstepsPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_i3pqv")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaskResource" load_steps=2 format=3 uid="uid://bye54uj8dkvg7"]
+
+[ext_resource type="Script" uid="uid://cpqk02pf8dmh" path="res://scripts/TaskResource.gd" id="1_njgt6"]
+
+[resource]
+script = ExtResource("1_njgt6")
+id = "encender_tablet"
+description = "Enciende la tablet"
+triggers_paranormal_event = true
+event_name = "Pasos_escalera"
+metadata/_custom_type_script = "uid://cpqk02pf8dmh"

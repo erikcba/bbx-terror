@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TaskResource" load_steps=2 format=3 uid="uid://yrnqgc5iol6j"]
+
+[ext_resource type="Script" uid="uid://cpqk02pf8dmh" path="res://scripts/TaskResource.gd" id="1_un43e"]
+
+[resource]
+script = ExtResource("1_un43e")
+id = "marcar_entrada"
+description = "Marca el comienzo del turno"
+metadata/_custom_type_script = "uid://cpqk02pf8dmh"
